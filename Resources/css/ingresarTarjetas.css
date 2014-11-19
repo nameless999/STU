@@ -1,0 +1,90 @@
+#lector
+{
+	float: left;
+	max-width: 200px;
+	height: auto;
+	margin-top: 35px;
+}
+
+#tui
+{
+	float: right;
+	max-width: 250px;
+	height: auto;
+	margin-top: -100px;
+	margin-bottom: 30px;
+	margin-right: 30px;
+
+}
+
+#ayudante
+{
+	float: right;
+	max-width: 200px;
+	height: auto;
+	margin-top: -90px;
+	margin-right: 30px;
+}
+
+#tui2
+{
+	float: right;
+	max-width: 250px;
+	height: auto;
+	margin-top: -150px;
+	margin-bottom: 40px;
+	margin-right: 30px;
+
+}
+
+#fondo
+{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.fondo
+{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#fondo2
+{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#formulario
+{
+	margin-left: 70px; 
+}
+
+#formulario2
+{
+	margin-left: 70px;
+}
+
+#estiloSpan
+{
+	color: #0073FF;
+	margin-left: 40px;
+}
+
+.lista
+{
+	font-size: 15px;
+
+}
+
+.lista2
+{
+	margin-bottom: 30px;
+}
+
+.subtitulo 
+{
+	color: #333;
+	margin:0 auto;
+	margin-top:50px;
+	margin-bottom:30px;
+	font-size:30px;
+	text-align:center;
+}

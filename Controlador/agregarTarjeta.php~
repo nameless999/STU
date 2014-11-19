@@ -1,0 +1,177 @@
+<?php
+	session_start();
+	include("../Modelo/tarjeta.php");
+	include("../Modelo/solicitud.php");
+	$tar = new tarjeta();
+	$sol = new solicitud();
+
+	$cantidadTarjetas = $tar->obtenerCantidadTarjetas();
+	$cantidadTarjetasA = $tar->obtenerCantidadTarjetasGrupo(1);	
+	$cantidadTarjetasB = $tar->obtenerCantidadTarjetasGrupo(2);
+	$cantidadTarjetasC = $tar->obtenerCantidadTarjetasGrupo(3);
+	$cantidadTarjetasD = $tar->obtenerCantidadTarjetasGrupo(4);
+	$cantidadTarjetasE = $tar->obtenerCantidadTarjetasGrupo(5);
+	$cantidadTarjetasF = $tar->obtenerCantidadTarjetasGrupo(6);
+	$cantidadTarjetasG = $tar->obtenerCantidadTarjetasGrupo(7);
+	$cantidadTarjetasH = $tar->obtenerCantidadTarjetasGrupo(8);
+	$fecha = date("Y-m-d");
+	$hora = date("H:i:s");   
+	$_SESSION['notificacion'] = "Tarjeta ingresada correctamente";
+	
+	if($cantidadTarjetasA < 10)
+	{
+		$grupo = 1;
+
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+
+	}
+
+	elseif($cantidadTarjetasB < 10)
+	{
+		$grupo = 2;
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+	}
+
+	elseif($cantidadTarjetasC < 10)
+	{
+		$grupo = 3;
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+	}
+
+	elseif($cantidadTarjetasD < 10)
+	{
+		$grupo = 4;
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+	}
+
+	elseif($cantidadTarjetasE < 10)
+	{
+		$grupo = 5;
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+	}
+
+	elseif($cantidadTarjetasF < 10)
+	{
+		$grupo = 6;
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+	}
+
+	elseif($cantidadTarjetasG < 10)
+	{
+		$grupo = 7;
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+	}
+
+	elseif($cantidadTarjetasH < 10)
+	{
+		$grupo = 8;
+		$k = $tar->agregarTarjeta($_POST['rol'], $grupo,$_POST['ayudante'], $fecha,$hora);
+		if($k == null)
+			{
+				$_SESSION['notificacion'] = "Tarjeta no ingresada";
+			}
+
+		else
+		{
+			$solicitud = $sol->obtenerSolicitudPorRol($_POST['rol']);
+			if($solicitud[1] == $_POST['rol'])
+			{
+				$sol->llegadaSolicitud($_POST['rol']);
+			}
+		}
+	}
+	header("Location: ../Vista/Tarjetas/agregarTarjeta.php");
+?>
