@@ -63,6 +63,7 @@
 			echo '<li><a class="messages" href="Ayudantes/ingresarAyudante.php"><i class="fa fa-user"></i> Agregar ayudante </a></li>';
 		}
 		?>
+		<li><a class="messages" href="Ayudantes/modificarContraseña.php"><i class="fa fa-lock"></i> Modificar contraseña </a></li>
 		<li><a class="messages" href="Tarjetas/agregarTarjeta.php"><i class="fa fa-cloud-upload"></i> Agregar Tarjeta </a></li>
 		<li><a class="messages" href="Tarjetas/solicitarTarjetas.php"><i class="fa fa-envelope"></i>Solicitar Tarjeta </a></li>
 		<li><a class="messages" href="Tarjetas/tarjetasSolicitadas.php"><i class="fa fa-table"></i>Tarjetas Solicitadas</a></li>

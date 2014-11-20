@@ -66,8 +66,8 @@
       <table style="text-align:center;">
   <theadstyle="text-align:center;">
     <tr>
-	<th> ID </th>
-      <th>Rol</th>
+	    <th> ID </th>
+      <th>Rut</th>
       <th>Grupo</th>
       <th>Ingresada por</th>
       <th>Fecha Ingreso </th>

@@ -6,6 +6,30 @@
 	}
 ?>
 
+<script>function formulario(form) {
+
+
+	if (form.rol.value.indexOf('-') != -1 ) 
+	{ 
+		alert ('El Rut no debe tener guión ej: 105724811.' )
+		form.rol.focus(); 
+		return false; 
+	}
+
+	if (form.rol.value.length < 8 || form.rol.value.length >= 10 ) 
+	{ 
+		alert ('El Rut está incorrecto.')
+		form.rol.focus(); 
+		return false; 
+	}
+
+	return true; 
+}
+
+</script>
+
+</script>
+
 <!DOCTYPE html> 	 
 
 <html> 
@@ -66,7 +90,7 @@
 		<div class="row" id="fondo">
 			<div class="col-md-6">
 			<div id="formulario">
-				<form class="form-horizontal" role="form" method="post" action="../../Controlador/retirarTarjeta.php">
+				<form onsubmit="return formulario(this)" class="form-horizontal" role="form" method="post" action="../../Controlador/retirarTarjeta.php">
 					
 					<div class="form-group" class="formulario" style="margin-top:80px;">
 					<label style="color:white;" for="ejemplo_email_3" class="col-lg-2 control-label"></label>

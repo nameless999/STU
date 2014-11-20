@@ -39,7 +39,14 @@
 		    $result = pg_query($query);
 		    echo $result;
 		    return $result;
-		 }
+		}
+
+		function modificarContrasenna($nombre,$contraseña)
+		{	
+			include("conexion.php");
+			$query = "UPDATE usuario SET pass = '".$contraseña."' where nombre = '".$nombre."'";
+			$result  = pg_query($query);
+		}
 
 	}
 
